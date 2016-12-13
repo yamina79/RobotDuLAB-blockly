@@ -95,32 +95,6 @@ Blockly.Blocks['Cabrer'] = {
     this.setColour(300);
     this.setTooltip('Fait reculer le robot');
    }
-};
-
-Blockly.Blocks['AnimerAnneauLed'] = {
-  helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
-  init: function() {
-    this.jsonInit({
-      "previousStatement": null,
-      "nextStatement": null
-    });
-    this.setColour(300);
-    this.appendDummyInput()
-        .appendField("Animer Anneau de Led");
-
-    this.appendValueInput('Couleur')
-        .appendField("Couleur")
-        .setCheck('Couleur')
-        .setAlign(Blockly.ALIGN_RIGHT);
-
-    this.appendValueInput('Animation')
-        .appendField("Animation")
-        .setCheck('Animation')
-        .setAlign(Blockly.ALIGN_RIGHT);
-
-    this.setTooltip('Le robot attends un temps donné en millisecondes avant de passer à l\'instruction suivante');
-  }
-};
 
 Blockly.Blocks['Distance'] = {
   helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
