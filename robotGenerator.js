@@ -28,6 +28,16 @@ Blockly.Arduino ['Reculer'] = function (block)  {
   return  code;
 };
 
+Blockly.Arduino ['Reculer et attendre'] = function (block)  {
+  Blockly.Arduino.setups_["setup_robotdulab"] = setup_robotdulab;
+  Blockly.Arduino.definitions_["define_robotdulab"] = define_robotdulab;
+  var code  ="robotDuLAB.Reculer();\n";
+  return  code;
+  var time = Blockly.Arduino.valueToCode(block, 'DELAY_TIME', Blockly.Arduino.ORDER_ATOMIC);
+  var code  ="delay("+time+");\n";
+  return  code;
+};
+
 Blockly.Arduino ['Arreter'] = function (block)  {
   Blockly.Arduino.setups_["setup_robotdulab"] = setup_robotdulab;
   Blockly.Arduino.definitions_["define_robotdulab"] = define_robotdulab;
