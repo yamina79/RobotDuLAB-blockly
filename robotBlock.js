@@ -10,7 +10,20 @@ Blockly.Blocks['Avancer'] = {
     this.setColour(300);
     this.setTooltip('Fait avancer le robot');
    }
+  init: function() {
+    this.jsonInit({
+      "previousStatement": null,
+      "nextStatement": null
+    });
+    this.setColour(300);
+    this.appendValueInput("DELAY_TIME", 'Number')
+        .appendField("Attendre")
+        .setCheck('Number');
+    this.setInputsInline(true);
+    this.setTooltip('Le robot attends un temps donné en millisecondes avant de passer à l\'instruction suivante');
+  }
 };
+
 
 Blockly.Blocks['Reculer'] = {
   helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
@@ -68,21 +81,6 @@ Blockly.Blocks['TournerADroite'] = {
    }
 };
 
-Blockly.Blocks['Attendre'] = {
-  helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
-  init: function() {
-    this.jsonInit({
-      "previousStatement": null,
-      "nextStatement": null
-    });
-    this.setColour(300);
-    this.appendValueInput("DELAY_TIME", 'Number')
-        .appendField("Attendre")
-        .setCheck('Number');
-    this.setInputsInline(true);
-    this.setTooltip('Le robot attends un temps donné en millisecondes avant de passer à l\'instruction suivante');
-  }
-};
 
 Blockly.Blocks['AnimerAnneauLed'] = {
   helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
