@@ -83,18 +83,6 @@ Blockly.Blocks['Attendre'] = {
     this.setTooltip('Le robot attends un temps donné en millisecondes avant de passer à l\'instruction suivante');
   }
 };
-Blockly.Blocks['Cabrer'] = {
-  helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
-  init: function() {
-    this.jsonInit({
-      "previousStatement": null,
-      "nextStatement": null
-    });
-    this.appendDummyInput()
-        .appendField("Cabrer");
-    this.setColour(300);
-    this.setTooltip('Fait reculer le robot');
-   }
 
 Blockly.Blocks['Distance'] = {
   helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
