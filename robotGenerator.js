@@ -12,7 +12,18 @@ var define_robotdulab = '#include <Servo.h>\n'+
   '#define ROUE_DROITE_PIN 5\n'+
   '#define ROUE_GAUCHE_PIN 3\n'+
   '#define ANNEAU_LED_PIN 6\n\n'+
-  'RobotDuLAB robotDuLAB(TRIGGER_PIN, ECHO_PIN, ROUE_DROITE_PIN, ROUE_GAUCHE_PIN, ANNEAU_LED_PIN);\n';
+  'RobotDuLAB robotDuLAB(TRIGGER_PIN, ECHO_PIN, ROUE_DROITE_PIN, ROUE_GAUCHE_PIN, ANNEAU_LED_PIN);\n'+
+  'boolean estBlanc(){\n'+
+  '      int val;\n'+
+  '      val=analogRead(A0);\n'+
+  '      return val <150;\n'+
+  '}\n'+
+  '\n'+
+  'boolean estNoir(){\n'+
+  '      int val;\n'+
+  '      val=analogRead(A0);\n'+
+  '      return val > 300;\n'+
+  '}\n';
 
 Blockly.Arduino ['Avancer'] = function (block)  {
   Blockly.Arduino.setups_["setup_robotdulab"] = setup_robotdulab;
