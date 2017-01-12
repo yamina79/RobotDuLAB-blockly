@@ -305,6 +305,22 @@ Blockly.Blocks['if_inf'] = {
   }
 };
 
+Blockly.Blocks['if_blanc'] = {
+  helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
+  init: function() {
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.appendDummyInput()
+        .appendField("si blanc");
+    this.setInputsInline(true);
+    this.appendStatementInput("Faire")
+        .setCheck(null)
+        .appendField("alors");
+    this.setColour(210);
+    this.setTooltip('');
+  }
+};
+
 Blockly.Blocks['if_sup'] = {
   helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
   init: function() {
