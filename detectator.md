@@ -7,13 +7,13 @@ Détectator va permettre à l'arduino de réagir suivant la couleur de marquage 
 
 Pré-requis
 -----------
-Carte arduino
-Avoir installé le logiciel arduino
-Capteur de niveau de gris : DFR0022
-Cables jumper
+*Avoir installé le logiciel arduino
+*Carte arduino
+*Capteur de niveau de gris : DFR0022
+*Cables jumper
 
-Nom de votre tutoriel
-----------------------
+Tuto Detectator
+--------------
 **Etape 1** : 
 
 Après avoir préparé le matériel, nous commençons à relier les éléments selon le shémas dont le lien est renseigné ci-dessous
@@ -59,8 +59,9 @@ boolean estNoir(){
 }
 ```
 
+** Etape 4 **
 
-
+![](IMG_5802.JPG)
 
 
 Schéma de câblage du capteur à l'arduino
