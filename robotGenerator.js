@@ -191,11 +191,8 @@ Blockly.Arduino['if_noir'] = function(block) {
 Blockly.Arduino['blanc'] = function(block) {
   Blockly.Arduino.setups_["setup_robotdulab"] = setup_robotdulab;
   Blockly.Arduino.definitions_["define_robotdulab"] = define_robotdulab;
-  var statements_faire = Blockly.Arduino.statementToCode(block, 'Faire');
-  var code = 'if (estBlanc())\n{\n' +
-              statements_faire + '} \n';
-
-  return code;
+  var code  ="estBlanc()";
+  return [ code,  Blockly.Arduino.ORDER_ATOMIC ];
 };
 
 Blockly.Arduino['if_sup'] = function(block) {
