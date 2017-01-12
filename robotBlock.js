@@ -320,6 +320,18 @@ Blockly.Blocks['if_blanc'] = {
     this.setTooltip('');
   }
 };
+
+Blockly.Blocks['blanc'] = {
+  helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
+  init: function() {
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.appendDummyInput()
+        .appendField("blanc");
+    this.setInputsInline(true);
+      }
+};
+
 Blockly.Blocks['if_noir'] = {
   helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
   init: function() {
