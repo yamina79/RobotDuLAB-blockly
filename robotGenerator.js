@@ -195,6 +195,13 @@ Blockly.Arduino['blanc'] = function(block) {
   return [ code,  Blockly.Arduino.ORDER_ATOMIC ];
 };
 
+Blockly.Arduino['noir'] = function(block) {
+  Blockly.Arduino.setups_["setup_robotdulab"] = setup_robotdulab;
+  Blockly.Arduino.definitions_["define_robotdulab"] = define_robotdulab;
+  var code  ="estNoir()";
+  return [ code,  Blockly.Arduino.ORDER_ATOMIC ];
+};
+
 Blockly.Arduino['if_sup'] = function(block) {
   Blockly.Arduino.setups_["setup_robotdulab"] = setup_robotdulab;
   Blockly.Arduino.definitions_["define_robotdulab"] = define_robotdulab;
