@@ -356,7 +356,7 @@ Blockly.Blocks['noir'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.appendDummyInput()
-        .appendField("blanc");
+        .appendField("noir");
     this.setInputsInline(true);
     this.setColour(210);
     this.setTooltip('');
