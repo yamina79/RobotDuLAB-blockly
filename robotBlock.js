@@ -359,6 +359,7 @@ Blockly.Blocks['noir'] = {
     this.appendDummyInput()
         .appendField("noir");
     this.setInputsInline(true);
+    this.setOutput(true, 'Number');
     this.setColour(210);
     this.setTooltip('');
       }
