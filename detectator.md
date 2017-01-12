@@ -20,7 +20,9 @@ Après avoir préparé le matériel, nous commençons à relier les éléments s
 
 **Etape 2** : 
 
-Rédiger le programme qui va permettre l'arduino de réagir suivant la couleur de marquage au sol, Blanc Detectator s'arrête et Noir Détectator avance 
+Ci-dessous,le programme qui va permettre à l'arduino de connaître la couleur de marquage au sol.
+Vous constaterez que lorsque l'intensité du capteur est inférieur à 150, c'est qu'il détecte du blanc, losque l'intensité est supérieur à 300, c'est qu'il détecte du noir.
+En dehors de ces deux données, le capteur détecte une couleur qui n'est ni du blanc ni du noir.
 
 **Etape 3** :
 
@@ -33,8 +35,27 @@ void loop()
 {
       int val;
       val=analogRead(A0);   //connect grayscale sensor to Analog 0
-      Serial.println(val,DEC);//print the value to serial        
+      Serial.println(val,DEC);//print the value to serial
+
+      if(estBlanc())
+        Serial.println("BLANC");
+      else if(estNoir())
+        Serial.println("NOIR");
+      else
+        Serial.println("???");
       delay(100);
+}
+
+boolean estBlanc(){
+      int val;
+      val=analogRead(A0);
+      return val <150;
+}
+
+boolean estNoir(){
+      int val;
+      val=analogRead(A0);
+      return val > 300;
 }
 ```
 
