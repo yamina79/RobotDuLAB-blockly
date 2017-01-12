@@ -324,12 +324,12 @@ Blockly.Blocks['if_blanc'] = {
 Blockly.Blocks['blanc'] = {
   helpUrl: 'http://wiki.labaixbidouille.com/index.php/RoboduLAB',
   init: function() {
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(false, null);
+    this.setNextStatement(false, null);
     this.appendDummyInput()
         .appendField("blanc");
     this.setInputsInline(true);
-    this.setOutput(true, 'Number');
+    this.setOutput(true, 'Boolean');
     this.setColour(210);
     this.setTooltip('');
       }
@@ -359,7 +359,7 @@ Blockly.Blocks['noir'] = {
     this.appendDummyInput()
         .appendField("noir");
     this.setInputsInline(true);
-    this.setOutput(true, 'Number');
+    this.setOutput(true, 'Boolean');
     this.setColour(210);
     this.setTooltip('');
       }
